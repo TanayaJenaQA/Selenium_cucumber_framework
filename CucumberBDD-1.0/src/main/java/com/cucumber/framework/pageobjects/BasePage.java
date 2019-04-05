@@ -23,7 +23,7 @@ public class BasePage extends GenericHelper {
 			LOG.debug("debug");
 			LOG.info("info");
 			LOG.warn("warn");
-			LOG.error("error");
+			LOG.error("error message updated");
 			projectdirectory = System.getProperty("user.dir");
 
 			if (PropertyFileReader.getBrowser() == BrowserType.Chrome) {
