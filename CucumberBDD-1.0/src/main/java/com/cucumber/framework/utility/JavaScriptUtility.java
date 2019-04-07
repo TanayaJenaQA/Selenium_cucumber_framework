@@ -1,11 +1,11 @@
-package com.cucumber.framework.utils;
+package com.cucumber.framework.utility;
 
 import org.openqa.selenium.JavascriptExecutor;
 
 import com.cucumber.framework.common.BaseObjects;
-import com.cucumber.framework.pageobjects.BasePage;
+import com.cucumber.framework.helper.TestBase;
 
-public class JavaScriptutils extends BasePage implements BaseObjects {
+public class JavaScriptUtility extends TestBase implements BaseObjects {
 
 	public void clickOnElementByJS(String locator) {
 		element = findWebElement(locator);

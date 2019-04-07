@@ -1,16 +1,16 @@
-package com.cucumber.stepdefinations;
+package com.cucumber.stepdefinations.common;
 
 import java.io.IOException;
 
 import com.cucumber.framework.common.BaseObjects;
-import com.cucumber.framework.pageobjects.BasePage;
+import com.cucumber.framework.helper.TestBase;
 import com.vimalselvam.cucumber.listener.Reporter;
 
 import cucumber.api.Scenario;
 import cucumber.api.java.After;
 import cucumber.api.java.Before;
 
-public class BDDCommonHooks extends BasePage implements BaseObjects {
+public class BDDCommonHooks extends TestBase implements BaseObjects {
 
 	@Before()
 	public void BeforeRun(Scenario scenario) throws IOException {

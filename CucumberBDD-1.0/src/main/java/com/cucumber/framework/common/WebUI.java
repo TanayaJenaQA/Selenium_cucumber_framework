@@ -10,10 +10,10 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.Select;
 
-import com.cucumber.framework.pageobjects.BasePage;
+import com.cucumber.framework.helper.TestBase;
 
-public class WebUI extends BasePage implements BaseObjects {
-
+public class WebUI extends TestBase implements BaseObjects {
+	
 	/* Method enterText: To enter any text into input type text field
 	 * @param locator  : String : Locator of the text field
 	 * @param inputText: String : Text that you want to enter

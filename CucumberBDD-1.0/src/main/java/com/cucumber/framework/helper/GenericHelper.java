@@ -10,8 +10,11 @@ import org.openqa.selenium.WebElement;
 import com.cucumber.framework.common.BaseObjects;
 import com.cucumber.framework.common.GlobalVariables;
 
-public class GenericHelper extends GlobalVariables implements BaseObjects {
+public  class GenericHelper extends GlobalVariables implements BaseObjects {
 
+	/* Method findWebElement : To return webelement based on locator
+	 * @param argument : String : Locator of the element
+	 */
 	public static WebElement findWebElement(String locator) {
 		try {
 			element = null;
@@ -76,6 +79,9 @@ public class GenericHelper extends GlobalVariables implements BaseObjects {
 		return null;
 	}
 
+	/* Method findWebElements : To return webelements based on locator
+	 * @param argument : String :  Locator of the element
+	 */
 	public static List<WebElement> findWebElements(String locator) {
 		try {
 			List<WebElement> elements = new ArrayList<>();

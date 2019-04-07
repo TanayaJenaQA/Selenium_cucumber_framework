@@ -1,4 +1,4 @@
-package com.cucumber.framework.helper;
+package com.cucumber.framework.utility;
 
 import java.io.File;
 import java.io.FileInputStream;
@@ -11,22 +11,25 @@ import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 import org.junit.Assert;
 
 import com.cucumber.framework.common.BaseObjects;
-import com.cucumber.framework.pageobjects.BasePage;
+import com.cucumber.framework.helper.TestBase;
 
-public class ExcelReader extends BasePage implements BaseObjects {
+public class ExcelReaderUtility extends TestBase implements BaseObjects {
 
-	protected  File file;
-	protected  String columnName;
-	protected  FileOutputStream fileOutputStream;
-	protected  String path = System.getProperty("user.dir") + "\\src\\main\\resources\\testdata\\TestData.xlsx";
+	protected File file;
+	protected String columnName;
+	protected FileOutputStream fileOutputStream;
+	protected String path = System.getProperty("user.dir") + "\\src\\main\\resources\\testdata\\TestData.xlsx";
 
+	/* Method getTestData : To read test data from excel based on test case ID
+	 * @param argument : String : Column name
+	 */
 	public String getTestData(String argument) throws IOException {
 		String key = null;
 		String value = null;
 		String argumentValue = null;
-		columnName = null;		
-		columnName = argument;		
-		testdatReader = new HashMap<>();	
+		columnName = null;
+		columnName = argument;
+		testdatReader = new HashMap<>();
 		try {
 			FileInputStream fisinputstream = new FileInputStream(readTestDataFile());
 			XSSFWorkbook xssfWorkbook = new XSSFWorkbook(fisinputstream);
@@ -57,14 +60,19 @@ public class ExcelReader extends BasePage implements BaseObjects {
 			return null;
 		}
 	}
-	
+
+	/* Method readTestCaseID : To read test data from feature file
+	 * @param testCase : String : testdataID from feature file
+	 */
 	public void readTestCaseID(String testCase) {
 		testCaseId = null;
 		if (!(testCase == null)) {
 			testCaseId = testCase;
-		} 
+		}
 	}
 
+	/*Method readTestDataFile : To read test data path from project
+	 */
 	public File readTestDataFile() {
 		try {
 			file = new File(path);

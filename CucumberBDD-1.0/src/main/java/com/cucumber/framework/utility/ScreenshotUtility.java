@@ -1,4 +1,4 @@
-package com.cucumber.framework.helper;
+package com.cucumber.framework.utility;
 
 import java.io.File;
 import java.io.IOException;
@@ -10,12 +10,15 @@ import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriverException;
 
 import com.cucumber.framework.common.BaseObjects;
-import com.cucumber.framework.pageobjects.BasePage;
+import com.cucumber.framework.helper.TestBase;
 
-public class ScreenshotHelper extends BasePage implements BaseObjects{
+public class ScreenshotUtility extends TestBase implements BaseObjects{
 
 	protected static String screenshotPath;
 	
+	/* Method takeScreenShot : To take screenshot of active webpage
+	 * @param scenarioName : String : Scenario name as screenshot file name
+	 */
 	public String takeScreenShot(String scenarioName) throws IOException {
 		try {
 			TakesScreenshot ts = (TakesScreenshot) driver;

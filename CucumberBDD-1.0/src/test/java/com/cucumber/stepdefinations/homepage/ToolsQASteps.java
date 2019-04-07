@@ -1,4 +1,4 @@
-package com.cucumber.stepdefinations;
+package com.cucumber.stepdefinations.homepage;
 
 import com.cucumber.framework.common.BaseObjects;
 

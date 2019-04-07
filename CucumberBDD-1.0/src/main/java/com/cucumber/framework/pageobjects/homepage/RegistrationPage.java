@@ -1,10 +1,11 @@
-package com.cucumber.framework.pageobjects;
+package com.cucumber.framework.pageobjects.homepage;
 
 import java.io.IOException;
 
 import com.cucumber.framework.common.BaseObjects;
 import com.cucumber.framework.common.WebUI;
-public class RegistrationPage extends BasePage implements BaseObjects {
+import com.cucumber.framework.helper.TestBase;
+public class RegistrationPage extends TestBase implements BaseObjects {
 
 	private String input_FirstName="firstname";
 	private String input_LastName="lastname";
