@@ -1,5 +1,7 @@
 package com.cucumber.stepdefinations.homepage;
 
+import org.junit.runners.Parameterized.Parameters;
+
 import com.cucumber.framework.common.BaseObjects;
 
 import cucumber.api.java.en.Then;
@@ -11,7 +13,6 @@ public class ToolsQASteps implements BaseObjects {
 	public void user_enters_valid_personal_information_from(String testDataReferenceId) throws Throwable {
 		registrationPageObj.fillForm(testDataReferenceId);
 	}
-
 	@When("^User clicks the submit button$")
 	public void user_clicks_the_submit_button() throws Throwable {
 		registrationPageObj.clickSubmit();

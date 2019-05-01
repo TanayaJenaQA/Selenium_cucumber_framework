@@ -145,5 +145,4 @@ public  class GenericHelper extends GlobalVariables implements BaseObjects {
 		}
 		return null;
 	}
-
 }

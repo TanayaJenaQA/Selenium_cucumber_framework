@@ -2,6 +2,8 @@ package com.cucumber.framework.pageobjects.homepage;
 
 import java.io.IOException;
 
+import org.junit.runners.Parameterized.Parameters;
+
 import com.cucumber.framework.common.BaseObjects;
 import com.cucumber.framework.common.WebUI;
 import com.cucumber.framework.helper.TestBase;
@@ -14,9 +16,8 @@ public class RegistrationPage extends TestBase implements BaseObjects {
 	private String input_Date="datepicker";
 	private String dropdown_country="continents";
 	private String button_Submit ="submit";
-	
-	
-	public void fillForm(String testdataReference) throws IOException {
+	private String value =null;
+	   public void fillForm(String testdataReference) throws IOException {
 		excelReaderObj.readTestCaseID(testdataReference);
 		WebUI.enterText(input_FirstName, excelReaderObj.getTestData("firstname"));
 		WebUI.enterText(input_LastName, excelReaderObj.getTestData("lastname"));
@@ -25,8 +26,13 @@ public class RegistrationPage extends TestBase implements BaseObjects {
 		WebUI.enterText(input_Date, excelReaderObj.getTestData("datepicker"));
 		WebUI.selectDropDownByText(dropdown_country, excelReaderObj.getTestData("continents"));
 	}
-	
+
 	public void clickSubmit() {
 		WebUI.clickOnElement(button_Submit);
+		System.out.println(value);
+	}
+	@Parameters(name="datafromPom")
+	public void clickSubmitnew(String datafromPom) {
+		value=datafromPom;
 	}
 }

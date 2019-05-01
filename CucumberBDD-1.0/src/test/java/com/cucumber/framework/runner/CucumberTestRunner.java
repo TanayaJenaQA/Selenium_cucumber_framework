@@ -15,7 +15,7 @@ import cucumber.api.junit.Cucumber;
 		features = {"src\\test\\resources\\featurefiles\\regressionsuite\\TestCase.feature"},
 		glue = {"com.cucumber.stepdefinations"},
 		dryRun = false,
-		monochrome=true,
+		monochrome= true,
 		strict = true)
 		//tags= {"@regression"})
 public class CucumberTestRunner {}
